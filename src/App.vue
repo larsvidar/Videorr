@@ -1,5 +1,16 @@
-<script setup lang='ts'>
-	import {RouterView} from 'vue-router';
+<script lang='ts'>
+	import {useAuth0} from '@auth0/auth0-vue';
+
+	export default {
+		setup() {
+			const {logout} = useAuth0();
+
+			return {
+				logout: logout as any,
+			};
+		}
+	};
+
 </script>
 
 
@@ -13,6 +24,8 @@
 					<h1>VideoSite</h1>
 					<p>&nbsp; - View your video files in your browser</p>
 				</div>
+
+				<button @click='logout'>Log out</button>
 			</header>
 
 			<main>

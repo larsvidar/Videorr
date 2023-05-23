@@ -13,7 +13,7 @@ app.use(
 		domain: 'larsvidar.eu.auth0.com',
 		clientId: 'xrSBXNP29UmfJXFfmykJKvpKjMxST5nl',
 		authorizationParams: {
-			redirect_uri: window.location.origin
+			redirect_uri: window.location.origin + '/video'
 		}
 	})
 );
