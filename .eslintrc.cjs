@@ -12,6 +12,8 @@ module.exports = {
 	rules: {
 		'no-console': 'warn',
 		indent: ['warn', 'tab'],
+		'no-mixed-spaces-and-tabs': ['warn'],
+
 		semi: ['warn', 'always', {
 			omitLastInOneLineBlock: true,
 		}],
@@ -21,7 +23,7 @@ module.exports = {
 			'switchCase': 1,
 			'ignores': []
 		}],
-		'vue/html-indent': ['error', 'tab', {
+		'vue/html-indent': ['warn', 'tab', {
 			'attribute': 1,
 			'baseIndent': 1,
 			'closeBracket': 0,
