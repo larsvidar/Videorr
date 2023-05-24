@@ -10,8 +10,8 @@ const app = createApp(App);
 app.use(router);
 app.use(
 	createAuth0({
-		domain: 'larsvidar.eu.auth0.com',
-		clientId: 'xrSBXNP29UmfJXFfmykJKvpKjMxST5nl',
+		domain: import.meta.env.VITE_AUTH0_DOMAIN || '',
+		clientId: import.meta.env.VITE_AUTH0_CLIENT_ID || '',
 		authorizationParams: {
 			redirect_uri: window.location.origin + '/video'
 		}

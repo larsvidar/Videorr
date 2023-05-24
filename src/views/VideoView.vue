@@ -1,26 +1,36 @@
-<script lang='ts'>
-	import {useAuth0} from '@auth0/auth0-vue';
+<script setup lang='ts'>
+	import {store} from '@/states/store';
+	import {reactive, ref} from 'vue';
 
-	export default {
-		setup() {
-			const { user, isAuthenticated } = useAuth0();
-			console.log({ user: user.value, isAuthenticated: isAuthenticated.value });
+	const video = ref();
+	console.log({video: video.value})
 
-			return {
-				user,
-				isAuthenticated,
-			};
-		},
-	};
+	const local = reactive({
+		url: '',
+	});
+
+	/**
+	 * Handle changed fileinput and use file on video-element
+	 * @param event 
+	 */
+	function handleChange(event: Event) {
+		const target = event.target as HTMLInputElement;
+		const file = target.files?.[0];
+		local.url = file ? URL.createObjectURL(file) : '';
+		video.value.src = local.url;
+	}
 </script>
 
 
 <template>
-	<main>
-		<h2>Du er logget inn!</h2>
-		<pre>
-			<code>{{ user }}</code>
-			<code>{{ isAuthenticated }}</code>
-		</pre>
-	</main>
+
+	<h2>Velg videofil!</h2>
+
+	<input type='file' @change='handleChange' />
+	<!-- Video-element to show inputed file -->
+	<video ref='video' controls width='400' muted autoplay></video>
+	
+	<p>{{ video?.value?.src }}</p>
+
+
 </template>
