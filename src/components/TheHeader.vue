@@ -1,8 +1,5 @@
 <script setup lang='ts'>
-	import {useAuth0} from '@auth0/auth0-vue';
-	import TheButton from './TheButton.vue';
-
-	const {logout} = useAuth0();
+	import LoginButtonVue from './LoginButton.vue';
 </script>
 
 
@@ -19,7 +16,9 @@
 			<p>&nbsp; - View your video files in your browser</p>
 		</div>
 
-		<TheButton :click='logout'>Logout</TheButton>
+		<div class='login'>
+			<LoginButtonVue />
+		</div>
 	</header>
 </template>
 
@@ -56,7 +55,7 @@
 			}
 		}
 
-		button {
+		.login {
 			margin-left: auto;
 		}
 	}
