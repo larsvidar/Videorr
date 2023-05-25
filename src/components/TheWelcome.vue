@@ -8,4 +8,6 @@
 	<RouterLink to="/login">Log in</RouterLink>
 	<br>
 	<RouterLink to="/video">Video</RouterLink>
+	<br>
+	<RouterLink to="/profile">Profile</RouterLink>
 </template>

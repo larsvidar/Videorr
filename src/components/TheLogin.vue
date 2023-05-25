@@ -1,21 +1,10 @@
-<script lang="ts">
+<script setup lang="ts">
 	import {useAuth0} from '@auth0/auth0-vue';
+	import TheButton from './TheButton.vue';
 
-	export default {
-		setup() {
-			const {loginWithRedirect} = useAuth0();
-
-			return {
-				login: () => {
-					loginWithRedirect();
-				}
-			};
-		}
-	};
+	const {loginWithRedirect: login} = useAuth0();
 </script>
 
 <template>
-	<div>
-		<button @click="login">Log in</button>
-	</div>
+	<TheButton :click="login">Log in</TheButton>
 </template>
