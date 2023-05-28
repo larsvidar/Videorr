@@ -6,9 +6,8 @@ import router from '@/router';
 import {createHead} from '@vueuse/head';
 import {createAuth0} from '@auth0/auth0-vue';
 
-
 const app = createApp(App);
-export const head = createHead();
+const head = createHead();
 
 app.use(head);
 app.use(router);
@@ -23,6 +22,5 @@ app.use(
 		}
 	})
 );
-
 
 app.mount('#app');
