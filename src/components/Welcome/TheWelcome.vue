@@ -13,7 +13,7 @@
 	<div class='welcome'>
 		<article>
 			<div v-if='isAuthenticated'>
-				<h2>Velkommen {{user?.fullName}}</h2>
+				<h2>Velkommen {{fullName}}</h2>
 				<RouterLink to="/video" class='videoLink'>Klikk <span>her</span> for å gå til videosiden</RouterLink>
 				<br><br>
 				<RouterLink to="/profile" class='profileLink'>Gå til Profil</RouterLink>
