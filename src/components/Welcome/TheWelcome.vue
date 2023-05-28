@@ -4,7 +4,6 @@
 	import {useAuth0} from '@auth0/auth0-vue';
 
 	const {isAuthenticated, user} = useAuth0();
-
 </script>
 
 
@@ -13,7 +12,7 @@
 		<article>
 			<div v-if='isAuthenticated'>
 				<h2>Velkommen {{user?.name}}</h2>
-				<RouterLink to="/video" class='videoLink'>Klikk her for å se videoer</RouterLink>
+				<RouterLink to="/video" class='videoLink'>Klikk <span>her</span> for å gå til videosiden</RouterLink>
 				<br><br>
 				<RouterLink to="/profile" class='profileLink'>Gå til Profil</RouterLink>
 			</div>
@@ -50,8 +49,6 @@
 			text-align: center;
 			margin-right: 16px;
 			width: 50%;
-
-
 
 			h2 {
 				font-size: var(--bigTitleSize);
