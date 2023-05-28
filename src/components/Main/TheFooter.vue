@@ -5,7 +5,7 @@
 <template>
 	<footer>
 		<TheContainer>
-			<p>© 2023 - Videorr</p>
+			<p>© 2023 - VideoRR</p>
 		</TheContainer>
 	</footer>
 </template>

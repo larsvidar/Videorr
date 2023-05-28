@@ -19,7 +19,7 @@
 			</div>
 
 			<div v-else>
-				<h2>Velkommen til Videorr</h2>
+				<h2>Velkommen til VideoRR</h2>
 				<p class='loginText'>Logg inn for å se videoer</p>
 				<LoginButtonVue />
 			</div>

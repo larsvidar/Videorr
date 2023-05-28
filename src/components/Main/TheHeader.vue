@@ -14,7 +14,7 @@
 
 			<div class='headline'>
 				<RouterLink to='/'>
-					<h1>Videorr</h1>
+					<h1>VideoRR</h1>
 				</RouterLink>
 				<p class='tagLine'>Se videoer i nettleseren</p>
 			</div>

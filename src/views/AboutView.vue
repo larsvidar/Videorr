@@ -1,6 +1,6 @@
 <template>
 	<div class='about'>
-		<h1>Om Videorr</h1>
+		<h1>Om VideoRR</h1>
 		<p>Dette er en side laget med Vue3 og Auth0.</p>
 	</div>
 </template>

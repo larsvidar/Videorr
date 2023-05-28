@@ -5,11 +5,11 @@
 	import heroImage from '@/assets/images/social.jpg';
 
 	useHead({
-		title: 'Videorr - Se dine videoer i nettleseren',
+		title: 'VideoRR - Se dine videoer i nettleseren',
 		meta: [
 			{
 				name: 'description', 
-				content: 'Med Videorr kan du last inn videoene dine og se dem rett i nettleseren.',
+				content: 'Med VideoRR kan du last inn videoene dine og se dem rett i nettleseren.',
 			},
 			{
 				property: 'og:url', 
