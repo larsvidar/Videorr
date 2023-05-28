@@ -16,7 +16,7 @@ app.use(router);
 app.use(
 	createAuth0({
 		domain: import.meta.env.VITE_AUTH0_DOMAIN || origin + '/noauth',
-		clientId: import.meta.env.VITE_AUTH0_CLIENT_ID,
+		clientId: import.meta.env.VITE_AUTH0_CLIENT_ID || 'none',
 		authorizationParams: {
 			redirect_uri: origin + '/',
 			display: 'page',
