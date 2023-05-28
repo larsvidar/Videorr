@@ -132,6 +132,7 @@
 				left: 0;
 				height: 100%;
 				width: 100%;
+				filter: sepia(1) hue-rotate(340deg);
 			}
 		}
 

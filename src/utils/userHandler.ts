@@ -1,22 +1,12 @@
 import type {User} from '@auth0/auth0-vue';
+import { capitalize } from './helpers';
+import type { IUser } from '@/types/IGeneral';
 
-export interface IUser {
-	username: string,
-	email: string,
-	fullName: string,
-	thumbnail: string,
-	service: string,
-	updatedAt?: number,
-	language?: string,
-	isEmailVerified?: boolean,
-	firstName?: string,
-	lastName?: string,
-}
 
 export function formatUser(user: User): Partial<IUser> | null {
 	if(!user) return null;
 
-	const service = user.sub?.split('|')[0].split('-')[0];
+	const service = capitalize(user.sub?.split('|')[0].split('-')[0]);
 
 	const formattedUser = {
 		username: user.nickname,

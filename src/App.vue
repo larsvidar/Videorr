@@ -35,10 +35,10 @@
 			flex-direction: column;
 			background-color: var(--color-background);
 			width: 1000px;
-			padding: 1rem 2rem;
+			//padding: 1rem 2rem;
 
 			main {
-				padding: 2rem 0;
+				//padding: 2rem 0;
 			}
 		}
 	}

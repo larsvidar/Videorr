@@ -1,16 +1,21 @@
+<script setup lang='ts'>
+	import TheContainer from './TheContainer.vue';
+</script>
+
 <template>
 	<footer>
-		<p>© 2021 - VideoSite</p>
+		<TheContainer>
+			<p>© 2021 - VideoSite</p>
+		</TheContainer>
 	</footer>
 </template>
 
 <style scoped lang='scss'>
-	footer {
+	.container {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		background: #9fccff;
-		margin: -1rem -2rem;
-		padding: 1rem 2rem;
+		padding: var(--main-padding);
 	}
 </style>

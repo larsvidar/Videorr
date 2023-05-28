@@ -3,11 +3,10 @@
 	import TheButton from './TheButton.vue';
 
 	const {loginWithRedirect: loginWithRedirect, logout, isAuthenticated} = useAuth0();
-	console.log('path: ', window.location.pathname)
 	const handleLogin = () => loginWithRedirect();
 </script>
 
 <template>
-	<TheButton v-if='!isAuthenticated' :click="handleLogin">Log in</TheButton>
+	<TheButton v-if='!isAuthenticated' :click="handleLogin">Logg inn</TheButton>
 	<TheButton v-if='isAuthenticated' :click="logout">Log out</TheButton>
 </template>
