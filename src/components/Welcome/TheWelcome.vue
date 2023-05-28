@@ -4,8 +4,8 @@
 	import {useAuth0} from '@auth0/auth0-vue';
 	import {formatUser} from '@/utils/userHandler';
 
-	const {isAuthenticated, user: rawUser} = useAuth0();
-	const user = formatUser(rawUser);
+	const {isAuthenticated, user} = useAuth0();
+	const fullName = user?.value?.name || '';
 </script>
 
 
