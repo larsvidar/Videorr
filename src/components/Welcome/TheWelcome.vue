@@ -12,7 +12,9 @@
 		<article>
 			<div v-if='isAuthenticated'>
 				<h2>Velkommen {{user?.name}}</h2>
-				<RouterLink to="/video" class='videoLink'>Klikk <span>her</span> for å gå til videosiden</RouterLink>
+				<RouterLink to="/video" class='videoLink'>
+					Klikk <span class='specificVideoLink'>her</span> for å gå til videosiden
+				</RouterLink>
 				<br><br>
 				<RouterLink to="/profile" class='profileLink'>Gå til Profil</RouterLink>
 			</div>
@@ -58,6 +60,11 @@
 			.videoLink, .loginText {
 				font-size: 20px;
 				margin-bottom: 20px;
+
+				.specificVideoLink {
+					font-weight: bold;
+					text-decoration: underline;
+				}
 			}
 			.profileLink {
 				font-size: 16px;

@@ -12,8 +12,6 @@ const head = createHead();
 app.use(head);
 app.use(router);
 
-console.log('Page: ', origin + '/');
-
 app.use(
 	createAuth0({
 		domain: import.meta.env.VITE_AUTH0_DOMAIN || origin + '/noauth',
