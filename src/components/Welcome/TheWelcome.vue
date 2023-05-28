@@ -3,7 +3,7 @@
 	import heroImage from '@/assets/images/movie-theater.jpg';
 	import {useAuth0} from '@auth0/auth0-vue';
 
-	const {isAuthenticated, user} = useAuth0();
+	const {isAuthenticated, user} = useAuth0() as any;
 </script>
 
 
