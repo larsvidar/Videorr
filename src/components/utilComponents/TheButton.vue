@@ -20,5 +20,6 @@
 		border-radius: 5px;
 		cursor: pointer;
 		box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+		white-space: nowrap;
 	}
 </style>

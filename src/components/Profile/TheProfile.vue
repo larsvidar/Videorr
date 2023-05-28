@@ -10,7 +10,7 @@
 	<div v-if='user'>
 		<h2>{{ user.fullName || user.username || user.email }}</h2>
 		<div class='userCard'>
-			<ProfileImage :src='user.thumbnail' />
+			<ProfileImage :src='user.thumbnail' :size='100' class='thumbnail' />
 			<div class='userInfo'>
 				<p>Brukernavn: {{ user.username }}</p>
 				<p>Epost: {{ user.email }}</p>
@@ -37,6 +37,16 @@
 		.userInfo {
 			display: flex;
 			flex-direction: column;
+
+			p {
+				white-space: nowrap;
+			}
+		}
+
+		.thumbnail {
+			@media (max-width: 400px) {
+				display: none;
+			}
 		}
 	}
 </style>

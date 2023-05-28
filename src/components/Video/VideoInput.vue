@@ -76,7 +76,7 @@
 			justify-content: center;
 			align-items: center;
 			position: relative;
-			width: 700px;
+			width: 80%;
 			aspect-ratio: 16/9;
 			background: #ddd;
 			border-radius: 8px;
@@ -109,7 +109,12 @@
 				svg {
 					width: 64px;
 					height: 64px;
-					margin-bottom: 16px;
+					margin: 16px;
+
+					@media(max-width: 320px) {
+						display: none;
+					}
+	
 				}
 
 				.text {
@@ -121,7 +126,7 @@
 				.description {
 					text-align: center;
 					font-size: 12px;
-					margin-bottom: 0px;
+					margin-bottom: 8px;
 					font-style: italic;
 				}
 			}
@@ -132,7 +137,6 @@
 				left: 0;
 				height: 100%;
 				width: 100%;
-				filter: sepia(1) hue-rotate(340deg);
 			}
 		}
 

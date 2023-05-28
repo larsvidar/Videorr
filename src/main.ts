@@ -14,7 +14,7 @@ app.use(
 		clientId: import.meta.env.VITE_AUTH0_CLIENT_ID || '',
 		authorizationParams: {
 			redirect_uri: origin + '/',
-			display: 'popup',
+			display: 'page',
 		}
 	})
 );

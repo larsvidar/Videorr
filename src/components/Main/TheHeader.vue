@@ -1,6 +1,6 @@
 <script setup lang='ts'>
-	import TheContainer from '../TheContainer.vue';
-	import LoginButtonVue from '../LoginButton.vue';
+	import TheContainer from '../utilComponents/TheContainer.vue';
+	import LoginButtonVue from '../utilComponents/LoginButton.vue';
 	import logo from '@/assets/images/logo.png';
 </script>
 
@@ -16,7 +16,7 @@
 				<RouterLink to='/'>
 					<h1>Videorr</h1>
 				</RouterLink>
-				<p>Se videoer i nettleseren</p>
+				<p class='tagLine'>Se videoer i nettleseren</p>
 			</div>
 
 			<div class='login'>
@@ -37,7 +37,11 @@ header {
 
 		.logo {
 			height: 50px;
-			margin-right: 2rem;
+			margin-right: 32px;
+
+			@media (max-width: 384px) {
+				margin-right: 16px;
+			}
 		}
 
 		.headline {
@@ -47,7 +51,12 @@ header {
 
 			a {
 				h1 {
-					font-size: 2rem;
+					font-size: 32px;
+					margin-right: 16px;
+
+					@media (max-width: 350px) {
+						display: none;
+					}
 				}
 
 				&:hover {
@@ -55,8 +64,13 @@ header {
 				}
 			}
 
-			p {
-				font-size: 1rem;
+			.tagLine {
+				font-size: 16px;
+				white-space: nowrap;
+
+				@media (max-width: 460px) {
+					display: none;
+				}
 			}
 		}
 

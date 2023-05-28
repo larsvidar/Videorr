@@ -1,11 +1,10 @@
 <script setup lang='ts'>
-	defineProps<{
+	const props = defineProps<{
 		src: string | undefined,
-		size?: {
-			type: number,
-			default: 50,
-		},
+		size?: number,
 	}>();
+
+	const imageSize = props.size || 50;
 </script>
 
 
@@ -14,7 +13,7 @@
 		v-if='src' 
 		:src='src' 
 		alt='Profile-image'
-		:style="{'--size': `${size}px`}"
+		:style="{'--size': `${imageSize}px`}"
 	/>
 </template>
 

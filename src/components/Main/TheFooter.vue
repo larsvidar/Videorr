@@ -1,11 +1,11 @@
 <script setup lang='ts'>
-	import TheContainer from '../TheContainer.vue';
+	import TheContainer from '../utilComponents/TheContainer.vue';
 </script>
 
 <template>
 	<footer>
 		<TheContainer>
-			<p>© 2021 - VideoSite</p>
+			<p>© 2023 - Videorr</p>
 		</TheContainer>
 	</footer>
 </template>
