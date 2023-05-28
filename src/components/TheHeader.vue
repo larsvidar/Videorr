@@ -33,7 +33,6 @@ header {
 		display: flex;
 		align-items: center;
 		background: #9fccff;
-		//padding: var(--main-padding);
 
 		.logo {
 			height: 50px;

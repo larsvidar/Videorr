@@ -21,15 +21,20 @@ body {
 		'Helvetica Neue', 
 		sans-serif
 	;
-
 	color: var(--primary-text-color);
-}
 
-a {
-	color: var(--primary-text-color);
-	text-decoration: none;
+	a {
+		color: var(--primary-text-color);
+		text-decoration: none;
+	
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 
-	&:hover {
-		text-decoration: underline;
+	#app {
+		display: flex;
+		justify-content: center;
 	}
 }
+

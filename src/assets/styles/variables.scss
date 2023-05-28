@@ -1,14 +1,28 @@
 /* Variables for the project */
 :root {
-  --main-padding: 16px 32px;
-  --primary-text-color: #2c3e50;
-  --primary-background-color: #eee;
-  --base-background-color: #e3e3e3;
+	--main-padding: 16px 32px;
+	--primary-text-color: #2c3e50;
+	--primary-background-color: #eee;
+	--base-background-color: #e3e3e3;
+	--appWidth: 1000px;
+	--bigTitleSize: 48px;
 }
 
 
-@media (prefers-color-scheme: dark) {
-  :root {
+@media (max-width: 1000px) {
+	:root {
+		--appWidth: 100%;
+	}
+}
 
-  }
+@media (max-width: 768px) {
+	:root {
+		--bigTitleSize: 32px;
+	}
+}
+
+@media (max-width: 400px) {
+	:root {
+		--appWidth: 400px;
+	}
 }

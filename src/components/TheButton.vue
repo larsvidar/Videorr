@@ -13,8 +13,9 @@
 
 <style scoped lang="scss">
 	button {
-		padding: 5px 8px;
+		padding: 10px 12px;
 		background-color: #f3f3f3;
+		font-size: 18px;
 		border: solid 1px #ddd;
 		border-radius: 5px;
 		cursor: pointer;

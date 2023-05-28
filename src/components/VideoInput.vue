@@ -62,10 +62,10 @@
 	.videoInput {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		height: 100%;
 
 		.label {
-			color: hsl(225, 12%, 85%);
 			font-size: 18px;
 			font-weight: 500;
 			margin-bottom: 8px;
@@ -76,8 +76,8 @@
 			justify-content: center;
 			align-items: center;
 			position: relative;
-			height: 400px;
-			width: 600px;
+			width: 700px;
+			aspect-ratio: 16/9;
 			background: #ddd;
 			border-radius: 8px;
 

@@ -1,45 +1,28 @@
 <script setup lang='ts'>
-	import {useAuth0} from '@auth0/auth0-vue';
-	import TheHeader from './components/TheHeader.vue';
-	import TheFooter from './components/TheFooter.vue';
-
-	const {logout} = useAuth0();
-
+import TheHeader from './components/TheHeader.vue';
+import TheFooter from './components/TheFooter.vue';
 </script>
 
 
 <template>
-	<div class='appContainer'>
-		<div class='appContent'>
-			<TheHeader />
+	<div class='appContent'>
+		<TheHeader />
 
-			<main>
-				<RouterView />
-			</main>
+		<main>
+			<RouterView />
+		</main>
 
-			<TheFooter />
-		</div>
+		<TheFooter />
 	</div>
 </template>
 
 
 <style scoped lang="scss">
-	.appContainer {
+	.appContent {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		width: 100%;
-
-		.appContent {
-			display: flex;
-			flex-direction: column;
-			background-color: var(--color-background);
-			width: 1000px;
-			//padding: 1rem 2rem;
-
-			main {
-				//padding: 2rem 0;
-			}
-		}
+		background-color: var(--color-background);
+		width: var(--appWidth);
+		overflow: auto;
 	}
 </style>
