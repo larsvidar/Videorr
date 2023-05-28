@@ -22,14 +22,19 @@ yarn
 ```sh
 yarn dev
 ```
-Then navigate to `http://localhost:5173/`
+- Then navigate to `http://localhost:5173/`
 
-3. Build
+3. Lint with [ESLint](https://eslint.org/)
+```sh
+yarn lint
+```
+
+4. Build
 ```sh
 yarn build
 ```
 
-4. Lint with [ESLint](https://eslint.org/)
+5. Preview build
 ```sh
-yarn lint
+yarn preview
 ```
