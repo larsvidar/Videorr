@@ -25,7 +25,7 @@ const router = createRouter({
 			component: () => import('../views/VideoView.vue')
 		},
 		{
-			path: '/noauth',
+			path: '/noauth/authorize',
 			name: 'noauth',
 			component: () => import('../views/NoAuthView.vue')
 		},
