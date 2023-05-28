@@ -1,14 +1,14 @@
 import type {User} from '@auth0/auth0-vue';
-import { capitalize, isEmpty, removeEmpty } from './helpers';
-import type { IUser } from '@/types/IGeneral';
+import {capitalize, isEmpty, removeEmpty} from '@/utils/helpers';
+import type {IUser} from '@/types/IGeneral';
 
 
 export function formatUser(user: User): Partial<IUser> | null {
-	if(isEmpty(user)) return null;
+	if (isEmpty(user)) return null;
 
 	const service = capitalize(user.sub?.split('|')[0].split('-')[0]);
-	const fullName = user.name?.includes('@') 
-		? user.nickname || user.name.split('@')[0] 
+	const fullName = user.name?.includes('@')
+		? user.nickname || user.name.split('@')[0]
 		: user.name;
 
 	const formattedUser = {

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-	import LoginButtonVue from '../utilComponents/LoginButton.vue';
+	import LoginButtonVue from '@/components/utilComponents/LoginButton.vue';
 	import heroImage from '@/assets/images/movie-theater.jpg';
-	import { useAuth0 } from '@auth0/auth0-vue';
+	import {useAuth0} from '@auth0/auth0-vue';
 
 	const {isAuthenticated, user} = useAuth0();
 

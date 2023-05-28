@@ -20,11 +20,6 @@ const router = createRouter({
 			component: () => import('../views/ProfileView.vue')
 		},
 		{
-			path: '/authenticate',
-			name: 'authenticate',
-			component: () => import('../views/AuthenticateView.vue')
-		},
-		{
 			path: '/video',
 			name: 'video',
 			component: () => import('../views/VideoView.vue')

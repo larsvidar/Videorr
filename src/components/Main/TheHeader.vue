@@ -1,6 +1,6 @@
 <script setup lang='ts'>
-	import TheContainer from '../utilComponents/TheContainer.vue';
-	import LoginButtonVue from '../utilComponents/LoginButton.vue';
+	import TheContainer from '@/components/utilComponents/TheContainer.vue';
+	import LoginButtonVue from '@/components/utilComponents/LoginButton.vue';
 	import logo from '@/assets/images/logo.png';
 </script>
 

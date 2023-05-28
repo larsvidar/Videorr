@@ -1,6 +1,6 @@
 <script setup lang='ts'>
 	import {useAuth0} from '@auth0/auth0-vue';
-	import LoginButton from './LoginButton.vue';
+	import LoginButton from '@/components/utilComponents/LoginButton.vue';
 	const {isAuthenticated, isLoading} = useAuth0();
 
 </script>

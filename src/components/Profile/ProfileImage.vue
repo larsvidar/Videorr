@@ -18,7 +18,7 @@
 </template>
 
 
-<style scoped>
+<style scoped lang='scss'>
 	img {
 		width: var(--size);
 		height: var(--size);

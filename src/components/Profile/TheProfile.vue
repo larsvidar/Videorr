@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-	import ProfileImage from './ProfileImage.vue';
+	import ProfileImage from '@/components/Profile/ProfileImage.vue';
 	import {store} from '@/states/store';
 
 	const {user} = store();
@@ -8,13 +8,13 @@
 
 <template>
 	<div v-if='user'>
-		<h2>{{ user.fullName || user.username || user.email }}</h2>
+		<h2>{{user.fullName || user.username || user.email}}</h2>
 		<div class='userCard'>
 			<ProfileImage :src='user.thumbnail' :size='100' class='thumbnail' />
 			<div class='userInfo'>
-				<p>Brukernavn: {{ user.username }}</p>
-				<p>Epost: {{ user.email }}</p>
-				<p>Tjeneste: {{ user.service }}</p>
+				<p>Brukernavn: {{user.username}}</p>
+				<p>Epost: {{user.email}}</p>
+				<p>Tjeneste: {{user.service}}</p>
 			</div>
 		</div>
 	</div>
@@ -25,28 +25,28 @@
 
 
 <style scoped lang='scss'>
-	h2 {
-		margin-bottom: 16px;
-	}
+h2 {
+	margin-bottom: 16px;
+}
 
-	.userCard {
+.userCard {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+	.userInfo {
 		display: flex;
-		align-items: center;
-		justify-content: flex-start;
+		flex-direction: column;
 
-		.userInfo {
-			display: flex;
-			flex-direction: column;
-
-			p {
-				white-space: nowrap;
-			}
-		}
-
-		.thumbnail {
-			@media (max-width: 400px) {
-				display: none;
-			}
+		p {
+			white-space: nowrap;
 		}
 	}
+
+	.thumbnail {
+		@media (max-width: 400px) {
+			display: none;
+		}
+	}
+}
 </style>
