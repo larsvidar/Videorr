@@ -3,7 +3,6 @@
 	import TheFooter from '@/components/Main/TheFooter.vue';
 	import {useHead} from '@vueuse/head';
 	import heroImage from '@/assets/images/social.jpg';
-	import favIcon from '@/assets/images/favicon.png';
 
 	useHead({
 		title: 'VideoRR - Se dine videoer i nettleseren',
@@ -32,7 +31,7 @@
 			},
 			{
 				rel: 'icon',
-				href: favIcon,
+				href: 'images/favicon.ico',
 			},
 		],
 	});
