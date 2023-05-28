@@ -1,6 +1,6 @@
 <script setup lang='ts'>
-	import TheContainer from './TheContainer.vue';
-	import LoginButtonVue from './LoginButton.vue';
+	import TheContainer from '../TheContainer.vue';
+	import LoginButtonVue from '../LoginButton.vue';
 	import logo from '@/assets/images/logo.png';
 </script>
 
@@ -29,6 +29,7 @@
 
 <style scoped lang='scss'>
 header {
+	border-bottom: solid 1px var(--borderColor);
 	.container{
 		display: flex;
 		align-items: center;

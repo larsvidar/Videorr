@@ -8,5 +8,5 @@
 
 <template>
 	<TheButton v-if='!isAuthenticated' :click="handleLogin">Logg inn</TheButton>
-	<TheButton v-if='isAuthenticated' :click="logout">Log out</TheButton>
+	<TheButton v-if='isAuthenticated' :click="logout">Logg ut</TheButton>
 </template>

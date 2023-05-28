@@ -1,22 +1,25 @@
 <script setup lang="ts">
-	import {store} from '@/states/store';
-	import LoginButtonVue from './LoginButton.vue';
+	import LoginButtonVue from '../LoginButton.vue';
 	import heroImage from '@/assets/images/movie-theater.jpg';
+	import {store} from '@/states/store';
+	import { useAuth0 } from '@auth0/auth0-vue';
+
 	const {user} = store();
+	const {isAuthenticated} = useAuth0();
+
 </script>
 
 
 <template>
 	<div class='welcome'>
 		<article>
-			<div v-if='user'>
-				<div>
-					<h2>Velkommen {{user.fullName}}</h2>
-					<RouterLink to="/video">Klikk her for å se videoer</RouterLink>
-				</div>
+			<div v-if='isAuthenticated'>
+				<h2>Velkommen {{user?.fullName}}</h2>
+				<RouterLink to="/video">Klikk her for å se videoer</RouterLink>
 				<br><br>
 				<RouterLink to="/profile" class='profileLink'>Gå til Profil</RouterLink>
 			</div>
+
 			<div v-else>
 				<h2>Velkommen til Videorr</h2>
 				<p>Logg inn for å se videoer</p>
@@ -31,13 +34,17 @@
 <style scoped lang="scss">
 	.welcome {
 		display: flex;
+		justify-content: space-between;
+		align-items: center;
 
 		article {
 			display: flex;
 			align-items: center;
+			justify-content: center;
 			color: var(--primary-text-color);
 			text-align: center;
 			margin-right: 16px;
+			width: 50%;
 
 			h2 {
 				font-size: var(--bigTitleSize);

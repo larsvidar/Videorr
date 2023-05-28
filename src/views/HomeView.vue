@@ -1,6 +1,6 @@
 <script setup lang="ts">
 	import TheContainer from '@/components/TheContainer.vue';
-	import TheWelcome from '../components/TheWelcome.vue';
+	import TheWelcome from '../components/Welcome/TheWelcome.vue';
 </script>
 
 

@@ -1,7 +1,7 @@
 <script setup lang='ts'>
 	import RestrictedAccess from '@/components/RestrictedAccess.vue';
 	import TheContainer from '@/components/TheContainer.vue';
-	import TheProfile from '@/components/TheProfile.vue';
+	import TheProfile from '@/components/Profile/TheProfile.vue';
 </script>
 
 

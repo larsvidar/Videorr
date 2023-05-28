@@ -13,7 +13,7 @@ app.use(
 		domain: import.meta.env.VITE_AUTH0_DOMAIN || '',
 		clientId: import.meta.env.VITE_AUTH0_CLIENT_ID || '',
 		authorizationParams: {
-			redirect_uri: origin + '/authenticate',
+			redirect_uri: origin + '/',
 			display: 'popup',
 		}
 	})

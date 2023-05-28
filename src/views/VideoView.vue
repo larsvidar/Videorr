@@ -1,14 +1,14 @@
 <script setup lang='ts'>
-	import VideoInput from '@/components/VideoInput.vue';
 	import RestrictedAccess from '@/components/RestrictedAccess.vue';
 	import TheContainer from '@/components/TheContainer.vue';
+	import TheVideo from '@/components/Video/TheVideo.vue';
 </script>
 
 
 <template>
 	<RestrictedAccess>
 		<TheContainer>
-			<VideoInput />
+			<TheVideo />
 		</TheContainer>
 	</RestrictedAccess>
 </template>
