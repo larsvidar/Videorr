@@ -16,7 +16,7 @@
 				<RouterLink to='/'>
 					<h1>Videorr</h1>
 				</RouterLink>
-				<p>Se videofiler i nettleseren</p>
+				<p>Se videoer i nettleseren</p>
 			</div>
 
 			<div class='login'>

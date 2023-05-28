@@ -1,11 +1,9 @@
 <script setup lang="ts">
 	import LoginButtonVue from '../LoginButton.vue';
 	import heroImage from '@/assets/images/movie-theater.jpg';
-	import {store} from '@/states/store';
 	import { useAuth0 } from '@auth0/auth0-vue';
 
-	const {user} = store();
-	const {isAuthenticated} = useAuth0();
+	const {isAuthenticated, user} = useAuth0();
 
 </script>
 
@@ -14,7 +12,7 @@
 	<div class='welcome'>
 		<article>
 			<div v-if='isAuthenticated'>
-				<h2>Velkommen {{user?.fullName}}</h2>
+				<h2>Velkommen {{user?.name}}</h2>
 				<RouterLink to="/video">Klikk her for å se videoer</RouterLink>
 				<br><br>
 				<RouterLink to="/profile" class='profileLink'>Gå til Profil</RouterLink>
