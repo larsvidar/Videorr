@@ -23,7 +23,12 @@ const router = createRouter({
 			path: '/video',
 			name: 'video',
 			component: () => import('../views/VideoView.vue')
-		}
+		},
+		{
+			path: '/noauth',
+			name: 'noauth',
+			component: () => import('../views/NoAuthView.vue')
+		},
 	]
 });
 

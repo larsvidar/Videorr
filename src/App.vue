@@ -3,6 +3,7 @@
 	import TheFooter from '@/components/Main/TheFooter.vue';
 	import {useHead} from '@vueuse/head';
 	import heroImage from '@/assets/images/social.jpg';
+	import favIcon from '@/assets/images/favicon.png';
 
 	useHead({
 		title: 'VideoRR - Se dine videoer i nettleseren',
@@ -22,6 +23,16 @@
 			{
 				name: 'twitter:card',
 				content: 'summary_large_image',
+			},
+		],
+		link: [
+			{
+				rel: 'canonical',
+				href: origin,
+			},
+			{
+				rel: 'icon',
+				href: favIcon,
 			},
 		],
 	});
